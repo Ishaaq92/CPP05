@@ -9,8 +9,8 @@ int	main(void)
 	Bureaucrat	c("Charlie", 50);
 	try
 	{
-	// 	a.incrementGrade();
-	// 	b.decrementGrade();
+	 	a.incrementGrade();
+	 	b.decrementGrade();
 		c.incrementGrade();
 		std::cout << c << std::endl;
 	}

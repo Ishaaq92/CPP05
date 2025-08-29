@@ -8,20 +8,20 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : name_(name)
 	if (grade > 150)
 		throw GradeTooLowException();
 	this->grade_ = grade;
-	std::cout << "Bureaucrat was constructed" << std::endl;
+	std::cout << this->getName() << ": Bureaucrat was constructed" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat(void)
 {
-	std::cout << "Bureaucrat was destructed" << std::endl;
+	std::cout << this->getName() << "Bureaucrat was destructed" << std::endl;
 }
 
-const std::string	Bureaucrat::getName(void)
+const std::string	Bureaucrat::getName(void) const
 {
 	return (this->name_);
 }
 
-int					Bureaucrat::getGrade(void)
+int					Bureaucrat::getGrade(void) const
 {
 	return (this->grade_);
 }
@@ -40,7 +40,7 @@ void				Bureaucrat::decrementGrade(void)
 	this->grade_ ++;
 }
 
-std::ostream		&operator<<(std::ostream &out, Bureaucrat &b)
+std::ostream		&operator<<(std::ostream &out, const Bureaucrat &b)
 {
 	out << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
 	return (out);
