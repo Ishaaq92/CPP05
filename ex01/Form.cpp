@@ -2,14 +2,14 @@
 #include "Bureaucrat.hpp"
 
 
-Form::Form(std::string name_, int gradeToSign_, int gradeToExecute_) : name_(name_), signed_(false)
+Form::Form(std::string name, int gradeToSign, int gradeToExecute) : name_(name), signed_(false)
 {
-	if (gradeToSign_ < 1 || gradeToExecute_ < 1)
+	if (gradeToSign < 1 || gradeToExecute < 1)
 		throw GradeTooHighException();
-	else if (gradeToSign_ > 150 || gradeToExecute_ > 150)
+	else if (gradeToSign > 150 || gradeToExecute > 150)
 		throw GradeTooLowException();
-	this->gradeToSign_ = gradeToSign_;
-	this->gradeToExecute_ = gradeToExecute_;
+	this->gradeToSign_ = gradeToSign;
+	this->gradeToExecute_ = gradeToExecute;
 	std::cout << this->name_ << ": Form was constructed" << std::endl;
 }
 
