@@ -4,11 +4,15 @@
 
 int	main(void)
 {
+	Bureaucrat	a("Alice", 1);
+	Bureaucrat	b("Bob", 150);
+	Bureaucrat	c("Charlie", 50);
 	try
 	{
-		// Bureaucrat	a("Alice", 0);
-		Bureaucrat	b("Bob", 151);
-		Bureaucrat	c("Charlie", 50);
+	// 	a.incrementGrade();
+	// 	b.decrementGrade();
+		c.incrementGrade();
+		std::cout << c << std::endl;
 	}
 	catch (GradeTooHighException &e)
 	{
