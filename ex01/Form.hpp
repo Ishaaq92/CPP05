@@ -18,9 +18,11 @@ class Form
 	public:
 		Form(std::string name_, int gradeToSign_, int gradeToExecute_);
 		~Form(void);
-		std::string	getName(void);
-		bool		getSigned(void);
-		int			getGradeToSign(void);
-		int			getGradeToExecute(void);
+		std::string	getName(void) const;
+		bool		getSigned(void) const;
+		int			getGradeToSign(void) const;
+		int			getGradeToExecute(void) const;
 		void		beSigned(Bureaucrat &b);
 };
+
+std::ostream		&operator<<(std::ostream &out, const Form &form);
