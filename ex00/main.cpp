@@ -1,5 +1,16 @@
-#include "Bureaucrat.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/03 15:32:26 by isahmed           #+#    #+#             */
+/*   Updated: 2026/03/03 15:32:46 by isahmed          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "Bureaucrat.hpp"
 #include <iostream>
 
 int	main(void)
@@ -16,11 +27,10 @@ int	main(void)
 	}
 	catch (GradeTooHighException &e)
 	{
-		std::cout << "No goody: " << e.what() << std::endl;
+		std::cout << "No good: " << e.what() << std::endl;
 	}
 	catch (GradeTooLowException &e)
 	{
-		std::cout << "No goody: " << e.what() << std::endl;
+		std::cout << "No good: " << e.what() << std::endl;
 	}
 }
-

@@ -1,4 +1,16 @@
-CXX = clang++
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/03/03 15:36:51 by isahmed           #+#    #+#              #
+#    Updated: 2026/03/03 15:36:53 by isahmed          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp Bureaucrat.cpp GradeExceptions.cpp
 NAME = bureaucrat

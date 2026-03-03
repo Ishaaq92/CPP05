@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/03 14:58:50 by isahmed           #+#    #+#             */
-/*   Updated: 2026/03/03 15:31:52 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/03/03 15:39:02 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : name_(name)
 
 Bureaucrat::~Bureaucrat(void)
 {
-	std::cout << this->getName() << "Bureaucrat was destructed" << std::endl;
+	std::cout << this->getName() << ": Bureaucrat was destructed" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &b) : name_(b.name_), grade_(b.grade_)
