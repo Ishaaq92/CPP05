@@ -14,19 +14,23 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp Bureaucrat.cpp GradeExceptions.cpp
 NAME = bureaucrat
+ODIR = objs
 
-OBJS = $(patsubst %.cpp, %.o, $(SRCS))
+OBJS = $(patsubst %.cpp, $(ODIR)/%.o, $(SRCS))
 
 all: $(NAME) 
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
-%.o: %.cpp
+$(ODIR)/%.o: %.cpp | $(ODIR)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
 
+$(ODIR): 
+	mkdir -p $(ODIR)
+
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(ODIR) 
 
 fclean: clean
 	rm -rf $(NAME)
@@ -34,3 +38,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
