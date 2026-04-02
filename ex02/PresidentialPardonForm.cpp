@@ -6,21 +6,21 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 21:12:58 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/08/29 23:08:09 by ishaaq           ###   ########.fr       */
+/*   Updated: 2026/04/02 16:01:21 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 #include "AForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string name, int gradeToSign, int gradeToExecute, std::string target) :  AForm(name, gradeToSign, gradeToExecute), target_(target)
+PresidentialPardonForm::PresidentialPardonForm(std::string target) :  AForm("Presidential Pardon Form", 25, 5), target_(target)
 {
-	std::cout << "PresidentialPardonForm was constructed" << std::endl;
+	// std::cout << "PresidentialPardonForm was constructed" << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(void)
 {
-	std::cout << "PresidentialPardonForm was destructed" << std::endl;
+	// std::cout << "PresidentialPardonForm was destructed" << std::endl;
 }
 		
 void	PresidentialPardonForm::execute(const Bureaucrat &executor) const
@@ -31,4 +31,3 @@ void	PresidentialPardonForm::execute(const Bureaucrat &executor) const
 		throw GradeTooLowException();
 	std::cout << this->target_ << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 }
-

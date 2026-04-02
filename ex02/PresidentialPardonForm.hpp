@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 21:24:01 by ishaaq            #+#    #+#             */
-/*   Updated: 2025/08/29 23:05:22 by ishaaq           ###   ########.fr       */
+/*   Updated: 2026/04/02 16:01:30 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class PresidentialPardonForm : public AForm
 	protected:
 
 	public:
-		PresidentialPardonForm(std::string name, int gradeToSign, int gradeToExecute, std::string target);
+		PresidentialPardonForm(std::string target);
 		~PresidentialPardonForm(void);
 		virtual void	execute(const Bureaucrat &executor) const;
 };
